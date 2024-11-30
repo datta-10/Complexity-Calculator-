@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexity Calculator</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Algorithm Complexity Calculator</h1>
+
+        <!-- Algorithm Selection Section -->
+        <div class="input-section">
+            <label for="algorithm">Select an Algorithm:</label>
+            <select id="algorithm" class="custom-select" onchange="calculateComplexity()">
+                <option value="">Choose Algorithm</option>
+                <option value="BubbleSort">Bubble Sort</option>
+                <option value="MergeSort">Merge Sort</option>
+                <option value="QuickSort">Quick Sort</option>
+                <option value="HeapSort">Heap Sort</option>
+                <option value="BinarySearch">Binary Search</option>
+                <option value="LinearSearch">Linear Search</option>
+                <option value="Custom">Custom Algorithm</option>
+            </select>
+        </div>
+
+        <!-- Custom Code Section -->
+        <div id="custom-algo-div" class="input-section" style="display:none;">
+            <label for="customCode">Custom Algorithm Code:</label>
+            <textarea id="customCode" class="custom-textarea" rows="8" placeholder="Paste your custom code here..."></textarea>
+            <button class="custom-button" onclick="analyzeCustom()">Analyze Custom Code</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="result" class="result-section">
+            <h2>Results</h2>
+            <h3>Time Complexity: <span id="time-complexity">N/A</span></h3>
+            <h3>Space Complexity: <span id="space-complexity">N/A</span></h3>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
